@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Browser</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Website Browser</h1>
+        <div id="auth-status">Not logged in</div>
+        <div id="subscription-status">No subscription</div>
+        <div id="search-limit" style="display: none;">Searches remaining: <span id="searches-remaining">5</span>/5</div>
+        <div id="auth-forms">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email">
+            <input type="password" id="login-password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <h2>Signup</h2>
+            <input type="email" id="signup-email" placeholder="Email">
+            <input type="password" id="signup-password" placeholder="Password">
+            <button onclick="signup()">Signup</button>
+        </div>
+        <div id="subscription-form" style="display: none;">
+            <h2>Subscribe</h2>
+            <select id="plan-select">
+                <option value="home-tester">Home Tester ($5/month)</option>
+                <option value="all-day">All Day User ($15/month)</option>
+            </select>
+            <input type="text" id="card-number" placeholder="Card Number (e.g., 1234 5678 9012 3456)">
+            <input type="text" id="card-expiry" placeholder="MM/YY">
+            <input type="text" id="card-cvv" placeholder="CVV">
+            <button onclick="submitPayment()">Submit Payment</button>
+        </div>
+        <div id="admin-panel" style="display: none;">
+            <h2>Admin Panel</h2>
+            <button onclick="getAllUsers()">View All Users</button>
+            <button onclick="getPaymentRequests()">View Payment Requests</button>
+            <div id="user-list"></div>
+            <div id="payment-requests"></div>
+        </div>
+        <div class="browser-controls">
+            <input type="text" id="url-input" placeholder="Enter URL (e.g., https://example.com)">
+            <button onclick="loadWebsite()">Go</button>
+            <button onclick="goBack()">Back</button>
+            <button onclick="goForward()">Forward</button>
+        </div>
+        <iframe id="browser-frame" sandbox="allow-scripts allow-same-origin"></iframe>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
