@@ -4,7 +4,8 @@
     "description": "A website browser with manual payment authorization",
     "main": "server/server.js",
     "scripts": {
-        "start": "node server/server.js"
+        "start": "node server/server.js",
+        "build": "npm install"
     },
     "dependencies": {
         "express": "^4.18.2",
