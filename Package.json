@@ -1,0 +1,20 @@
+{
+    "name": "website-browser",
+    "version": "1.0.0",
+    "description": "A website browser with manual payment authorization",
+    "main": "server/server.js",
+    "scripts": {
+        "start": "node server/server.js"
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "helmet": "^7.0.0",
+        "express-rate-limit": "^6.7.0",
+        "xss-clean": "^0.1.4",
+        "cors": "^2.8.5",
+        "mongoose": "^7.0.0",
+        "bcryptjs": "^2.4.3",
+        "jsonwebtoken": "^9.0.0",
+        "dotenv": "^16.0.0"
+    }
+}
